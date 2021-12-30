@@ -1,0 +1,16 @@
+logon :- getinput,
+        write('You are logged on.'),nl.
+
+logon :- repeat,
+        write('Sorry, you are not permitted.'),nl,
+        write('Try again.'),nl,
+        getinput,
+        write('You are now logged on.').
+
+getinput :- write('please enter your name : '),
+        read(Name),nl,
+        write('please enter password : '),
+        read(Password),nl,
+        user(Name, Password).
+
+user(bhumit,123).

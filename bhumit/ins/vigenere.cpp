@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<string.h> 
+int main(){
+    char msg[100], key[20];
+ 	fflush(stdin);
+ 	printf("Enter the plain text : ");
+ 	gets(msg);
+ 	printf("Enter Key : ");
+ 	gets(key);	
+    int msgLen=0, keyLen=0, i=0, j=0;
+ 	msgLen = strlen(msg);
+ 	keyLen = strlen(key);
+	printf("%d \n", msgLen);
+    char newKey[msgLen], encryptedMsg[msgLen], decryptedMsg[msgLen];
+ 
+    for(i = 0, j = 0; i < msgLen; ++i, ++j){
+        if(j == keyLen)
+            j = 0;
+        newKey[i] = key[j];
+    } 
+    newKey[i] = '\0';
+    //encryption
+    for(i = 0; i < msgLen; ++i){
+        encryptedMsg[i] = ((msg[i] + newKey[i]) % 26) + 'A';
+    }
+    encryptedMsg[i] = '\0';
+ 
+    //decryption
+    for(i = 0; i < msgLen; ++i){
+        decryptedMsg[i] = (((encryptedMsg[i] - newKey[i]) + 26) % 26) + 'A';
+   }
+    decryptedMsg[i] = '\0';
+ 
+    printf("Original Message: %s", msg);
+    printf("\nKey: %s", key);
+    printf("\nNew Generated Key: %s", newKey);
+    printf("\nEncrypted Message: %s", encryptedMsg);
+    printf("\nDecrypted Message: %s", decryptedMsg);
+ 
+	return 0;
+}	
+

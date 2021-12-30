@@ -1,0 +1,2 @@
+rootProject.name = "andriodlab2(1)"
+include ':app'

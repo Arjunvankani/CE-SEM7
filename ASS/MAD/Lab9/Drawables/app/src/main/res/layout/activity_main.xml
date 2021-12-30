@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/team1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Team 1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:layout_marginTop="10dp">
+
+        </TextView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/team1"
+            android:layout_marginTop="20dp">
+            <ImageButton
+                android:id="@+id/minus1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:contentDescription="Minus Button"
+                android:src="@drawable/ic_minus"
+                android:background="@drawable/buttonbackground"
+                android:onClick="decreaseScore">
+
+            </ImageButton>
+            <TextView
+                android:id="@+id/score1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="105dp"
+                android:layout_toRightOf="@+id/minus1"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline">
+
+            </TextView>
+            <ImageButton
+                android:id="@+id/plus1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="105dp"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@+id/score1"
+                android:contentDescription="Plus Button"
+                android:src="@drawable/ic_plus"
+                android:background="@drawable/buttonbackground"
+                android:onClick="increaseScore">
+
+            </ImageButton>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/team2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Team 2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline">
+
+        </TextView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/team2"
+            android:layout_marginTop="20dp">
+            <ImageButton
+                android:id="@+id/minus2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:contentDescription="Minus Button"
+                android:src="@drawable/ic_minus"
+                android:background="@drawable/buttonbackground"
+                android:onClick="decreaseScore">
+
+            </ImageButton>
+            <TextView
+                android:id="@+id/score2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="105dp"
+                android:layout_toRightOf="@+id/minus2"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline">
+
+            </TextView>
+            <ImageButton
+                android:id="@+id/plus2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="105dp"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@+id/score2"
+                android:contentDescription="Plus Button"
+                android:src="@drawable/ic_plus"
+                android:background="@drawable/buttonbackground"
+                android:onClick="increaseScore">
+
+            </ImageButton>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>
